@@ -1,0 +1,23 @@
+  const btn = document.getElementById("saveBtn"); --> เข้าถึง element ด้วย id = saveBtn
+  const messageInput = document.getElementById("message"); --> เข้าถึง element ด้วย id = message
+  const list = document.getElementById("list"); --> เข้าถึง element ด้วย id = list
+ 
+  btn.addEventListener("click", () => { --> เพืม event click ให้กับปุ่ม btn
+    const text = messageInput.value; --> กำหนดให้ messageInput คือตัวแปร text
+    const time = new Date().toLocaleTimeString("th-TH", { hour12: false }); --> กำหนดให้ ตัวแปร time เก็บค่าของเอาเวลาตอนนี้จากเครื่อง ตาม time zone thai และให้เวลาแสดงแบบ 24 ชั่วโมง
+
+    const li = document.createElement("li"); --> สร้าง element li
+    li.textContent = `[${time}] -- ${text}`; --> จัด format ของเวลาและ text messageInput
+
+    list.appendChild(li); --> นำ format ที่จัดไว้ append เข้าไปใน list ตามที่เราไป getElement มา
+    messageInput.value = "";  --> รีเซ็ต value ของ messageInput
+  });
+
+
+จากในห้องที่เรียนเรื่อง time stamp เพื่อนำไปใช้ใน integrated project เลยไปหาโจทย์จาก ChatGPT มานั่งลองฝึกดูครับ
+
+ขั้นตอนและสิ่งที่ได้ฝึก
+
+- ใส่ message ตามที่เราต้องการเข้าไปแล้วใช้ DOM ในการจัดการ format เพื่อสร้างและใส่ element
+- เก็บค่าของเอาเวลาตอนนี้จากเครื่องหรือ server ตาม time zone thai และให้เวลาแสดงแบบ 24 ชั่วโมง
+- นำไปแสดงในหน้า DOM

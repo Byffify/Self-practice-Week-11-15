@@ -1,6 +1,6 @@
-#Borworn Kultumyotin 67130500017
+# Borworn Kultumyotin 67130500017
 
-##Weekly Progress
+## Weekly Progress
 
 - [x] Week 11
 - [x] Week 12

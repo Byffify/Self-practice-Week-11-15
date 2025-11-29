@@ -8,3 +8,8 @@
 - ทีนี้หน้าเว็บก็จะแสดงตามที่เรา fetch ได้
 
 มีการแต่ง style.css นิดหน่อยเพื่อความสวยงามและมองง่าย
+
+ส่วนอีกข้อนึงเป็นการเรียนรู้เรื่อง fetch API ครับซึ่งได้นำโจทย์มาจากส่วนนึงที่เป็นของ integrated project ที่รับผิดชอบ
+ซึ่งจะไป fetch ข้อมูลจาก API แล้วแสดงผลออกมาเป็นจำนวนของ study plans ที่ active อยู่โดยใช้
+const data = await res.json(); --> ในการแปลงเป็น json  
+el.innerHTML = `<i class="fa-regular fa-hand"></i> Active Study Plans: ${data.length}`; --> จัด format และแสดงผล

@@ -1,0 +1,10 @@
+- การเชื่อมต่อและจัดการข้อมูล (Fetch API และ Async/Await)
+ได้ฝึกใช้ Fetch API ในการดึงและส่งข้อมูล (GET/POST/DELETE) โดยปรับมาเขียนแบบ `async/await` เพื่อให้โค้ดอ่านง่ายขึ้นและประยุกต์มาจากสิ่งที่ได้เรียนรู้ใน integrated project
+รวมถึงได้ลองทำระบบ Pagination (ปุ่ม Load More) เพื่อโหลดข้อมูลทีละชุดตามความรู้ในวิชา backend และฝึกการจัดการ Error ด้วย try/catch
+
+- การจัดการ DOM และ Event Listener
+ส่วนนี้ตั้ใจทำเพื่อให้พื้นฐานแม่นเพื่อเตรียมทำโปรเจค โดยฝึกการเข้าถึง Element (getElementById), การสร้าง/ลบ Element (createElement, appendChild, removeChild) 
+และการดักจับ Event ต่างๆ เช่น การคลิกปุ่ม เพื่อทำลูกเล่นต่างๆ เช่น ปุ่ม Toggle ซ่อน/แสดงเนื้อหา หรือระบบ Counter
+
+- การจัดการวันและเวลา (Date & Time)
+ได้ฝึกใช้ Date Object ของ JavaScript ในการดึงเวลาปัจจุบันและแปลง Format เป็นรูปแบบภาษาไทย เพื่อนำไปใช้บันทึกเวลาในการทำรายการต่างๆ ซึ่งนำไปประยุกต์ได้กับตัว Integrated Project

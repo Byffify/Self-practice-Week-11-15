@@ -1,0 +1,114 @@
+Practice 1
+
+const changeTextBtn = document.getElementById('changeText') --> เข้าถึงปุ่ม changeText
+const message = document.getElementById('message') --> เข้าถึง element message
+
+changeTextBtn.addEventListener("click", () => { --> เพิ่ม event click ให้ปุ่ม
+    message.textContent = "Hello DOM!" --> เปลี่ยนข้อความใน message เป็น "Hello DOM!"
+})
+
+Practice 2
+
+const changeColorBtn = document.getElementById('changeColor') --> เข้าถึงปุ่ม changeColor
+const box = document.getElementById('box') --> เข้าถึง element box
+
+changeColorBtn.addEventListener("click", () => { --> เพิ่ม event click ให้ปุ่ม
+    box.style.backgroundColor = "gray" --> เปลี่ยนสีพื้นหลังเป็นสีเทา
+    box.style.width = "200px" --> กำหนดความกว้าง
+    box.style.height = "200px" --> กำหนดความสูง
+})
+
+Practice 3
+
+const addItemBtn = document.getElementById('addItem') --> เข้าถึงปุ่ม addItem
+const list = document.getElementById('list') --> เข้าถึง element list (ul)
+
+addItemBtn.addEventListener("click", () => { --> เพิ่ม event click ให้ปุ่ม
+    const li = document.createElement('li') --> สร้าง element li ใหม่
+    li.textContent = `Item ${list.childNodes.length + 1}` --> กำหนดข้อความให้ li โดยนับจำนวนลูก(childNodes) ใน list
+    list.appendChild(li) --> เพิ่ม li เข้าไปใน list
+})
+
+Practice 4
+
+const addItemBtn = document.getElementById('addItem') --> เข้าถึงปุ่ม addItem
+const removeLastBtn = document.getElementById('removeLast') --> เข้าถึงปุ่ม removeLast
+const list = document.getElementById('list') --> เข้าถึง element list
+
+addItemBtn.addEventListener("click", () => { --> เพิ่ม event click ให้ปุ่มเพิ่ม
+    const li = document.createElement('li') --> สร้าง element li ใหม่
+    li.textContent = `Item ${list.childNodes.length + 1}` --> กำหนดข้อความให้ li โดยนับจำนวนลูก(childNodes) ใน list แล้วนำไป .length เพื่อนับจำนวนแล้ว + 1
+    list.appendChild(li) --> append เข้าไปใน list
+})
+
+removeLastBtn.addEventListener("click" , () => { --> เพิ่ม event click ให้ปุ่มลบ
+    list.removeChild(list.lastChild) --> ลบลูกตัวสุดท้ายออกจาก list
+})
+
+
+Practice 5
+
+const toggleBtn = document.getElementById('togglePanel') --> เข้าถึงปุ่ม togglePanel
+const divEl = document.getElementById('panel') --> เข้าถึง element panel
+
+toggleBtn.addEventListener("click", () => { --> เพิ่ม event click
+    if (divEl.style.display === "none") { --> เช็คว่าซ่อนอยู่หรือไม่
+        divEl.style.display = "block" --> ถ้าซ่อนอยู่ ให้แสดง divEl
+    } else {
+        divEl.style.display = "none" --> ถ้าแสดงอยู่ ให้ซ่อน divEl
+    }
+})
+
+
+Practice 6
+
+const input = document.getElementById("name-input") --> เข้าถึง input
+const changeTextBtn = document.getElementById("changeText") --> เข้าถึงปุ่ม changeText
+const result = document.getElementById("result") --> เข้าถึง element result
+
+changeTextBtn.addEventListener("click", () => { --> เพิ่ม event click
+    result.textContent = `Hello, ${input.value}` --> นำค่าจาก input มาแสดงผล
+})
+
+
+Practice 7
+
+const addBtn = document.getElementById('add'); --> เข้าถึงปุ่มบวก
+const minusBtn = document.getElementById('minus'); --> เข้าถึงปุ่มลบ
+const count = document.getElementById('count'); --> เข้าถึง element count
+
+let countNum = 0 --> ตัวแปรเก็บค่าตัวเลข เริ่มต้น 0
+addBtn.addEventListener("click", () => { --> ปุ่มบวก
+    countNum++ --> เพิ่มค่าทีละ 1 จาก click ครั้งละ 1
+    count.textContent = countNum --> อัปเดตหน้าจอโดยใช้ .textContent
+})
+
+minusBtn.addEventListener("click", () => { --> ปุ่มลบ
+    countNum-- --> ลดค่าทีละ 1 จาก click ครั้งละ 1
+    count.textContent = countNum --> อัปเดตหน้าจอโดยใช้ .textContent
+})
+
+
+week 15 นี้ เราได้เรียนรู้เกี่ยวกับ DOM และ Event listener ซึ่งจากการสอบ module ที่แล้วทำให้อยากฝึกฝนในเรื่องของ DOM เพิ่มเติมเพื่อนำไปประยุกต์ใช้ในต่อใน integrated project (และได้สรุปรวมๆสำหรับเตรียมตัวสอบใน module3)
+
+1.  การเข้าถึง Element ใน DOM (document.getElementById):
+    การทำความเข้าใจว่า DOM คือการเข้าถึง Element ต่างๆ บนหน้าเว็บเป็นขั้นตอนแรกที่สำคัญที่สุด ได้เรียนรู้วิธีใช้ `document.getElementById()` เพื่อเลือก Element ที่มี ID เฉพาะเจาะจง 
+
+2.  การจัดการ Event Listener (addEventListener "click"):
+    หลังจากเข้าถึง Element ได้แล้ว ขั้นตอนต่อไปคือการทำให้หน้าเว็บมี interact กับผู้ใช้ ได้ฝึกฝนการใช้ `addEventListener()` เพื่อ listen เช่น การคลิกเมาส์ (event "click") เมื่อผู้ใช้คลิกปุ่มหรือ Element ใดๆ ทำตาม function ที่กำหนด
+
+3.  การแก้ไข Text Content (textContent):
+    การแก้ไขข้อความที่แสดงอยู่บนหน้าเว็บ เราได้เรียนรู้วิธีใช้ `textContent` เพื่อเปลี่ยนข้อความภายใน Element เช่น การเปลี่ยนข้อความจาก "Hello" เป็น "Hello DOM!" เมื่อผู้ใช้คลิกปุ่ม จาก prctice ที่ฝึกไปค้าบบบ
+
+4.  การจัดการ Style (style.backgroundColor, style.display):
+    ปรับเปลี่ยนรูปลักษณ์ของ Element ได้ด้วยการจัดการสไตล์ CSS โดยใช้คุณสมบัติ `style` เพื่อเปลี่ยนสีพื้นหลัง (`backgroundColor`) หรือ Element (`display`) เช่น การซ่อนหรือแสดง Element เพื่อสร้างเอฟเฟกต์การสลับ (toggle)
+
+5.  การสร้างและลบ Element (createElement, appendChild, removeChild):
+    เรียนรู้วิธีการสร้าง Element HTML ใหม่ๆ ขึ้นมาด้วย `document.createElement()` และเพิ่มเข้าไปในโครงสร้าง DOM ด้วย `appendChild()` นอกจากนี้ได้ฝึกฝนการลบ Element ที่ไม่ต้องการออกจากหน้าเว็บด้วย `removeChild()` ทำให้เราสามารถเพิ่มหรือลบรายการในลิสต์ได้อย่างง่ายและ flex ตามสถานะการเช่น ลบตัวสุดท้ายอาจจะใช้ .lastChild
+
+6.  การอ่านค่าจาก Input (value):
+    เรียนรู้วิธีการเข้าถึงค่าในช่อง Input โดยใช้คุณสมบัติ `value` ทำให้เราสามารถนำข้อมูลที่ผู้ใช้ป้อนไปประมวลผลหรือแสดงผลได้
+
+7.  Logic พื้นฐาน:
+    ได้นำความรู้ทั้งหมดที่เรียนมาประยุกต์ใช้ในการสร้าง Logic เช่น
+    Counter: การสร้างตัวนับที่สามารถเพิ่มหรือลดค่าได้เมื่อผู้ใช้คลิกปุ่ม, Toggle visibility: การสลับการแสดงผลของ Element 

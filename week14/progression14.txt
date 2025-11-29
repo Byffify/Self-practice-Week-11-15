@@ -16,8 +16,40 @@
 
 จากในห้องที่เรียนเรื่อง time stamp เพื่อนำไปใช้ใน integrated project เลยไปหาโจทย์จาก ChatGPT มานั่งลองฝึกดูครับ
 
+practice1
+
 ขั้นตอนและสิ่งที่ได้ฝึก
 
 - ใส่ message ตามที่เราต้องการเข้าไปแล้วใช้ DOM ในการจัดการ format เพื่อสร้างและใส่ element
 - เก็บค่าของเอาเวลาตอนนี้จากเครื่องหรือ server ตาม time zone thai และให้เวลาแสดงแบบ 24 ชั่วโมง
 - นำไปแสดงในหน้า DOM
+
+practice2
+
+ขั้นตอนและสิ่งที่ได้ฝึก
+
+- คือการแสดงเวลาในปัจจุบันของเครื่อง
+- ใช้ DOM เพื่อจัด format ของเวลา (ใช้ คำสั่ง .toISOString() เพื่อให้เวลาแสดงแบบ 24 ชั่วโมง)
+- นำไปแสดงในหน้า DOM
+
+practice3
+
+ขั้นตอนและสิ่งที่ได้ฝึก
+
+- คือการแสดงเวลาในปัจจุบันของเครื่อง
+- ใช้ DOM เพื่อจัด format ของเวลา (ใช้ คำสั่ง .toLocaleString() เพื่อให้เวลาแสดงแบบ 24 ชั่วโมง)
+- นำไปแสดงในหน้า DOM (แต่ว่าจะเพิ่มในการสร้าง event ให้กับปุ่ม update time เมื่อกดแล้วถึงจะแสดงเวลาใหม่)
+
+practice4
+
+ขั้นตอนและสิ่งที่ได้ฝึก
+
+- เป็นการสร้าง list ของเวลาในหน้า DOM
+- ซึ่งจะแสดงตามที่เรากดลงไปในหน้า DOM
+- ใช้ const time = now.toLocaleString() เพื่อจัด format ของเวลา
+
+const li = document.createElement("li") --> สร้าง element li
+li.textContent = `current time: ${time}` --> จัด format ของเวลาและ text messageInput
+timeList.appendChild(li) --> นำ format ที่จัดไว้ append เข้าไปใน list ตามที่เราไป getElement มา
+
+

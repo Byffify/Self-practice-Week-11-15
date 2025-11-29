@@ -6,3 +6,22 @@
 - แล้วนำมา Add DOM โดยกดปุ่มเพื่อส่ง JSON ที่มี { title, body } เพื่อทำการสร้าง
 - แล้วหลังจากการสร้างนำมาแสดงใน div นี้ resultDiv ด้วย .textContent
 - แปลงข้อมูล js (object/array) ให้กลายเป็นสตริงแบบ JSON และจัด format JSON.stringify(data, null, 2)
+
+
+practice2 
+
+ขั้นตอนและสิ่งที่ได้ฝึก
+
+- fetch มาจากเว็บไซต์ที่แชทให้มา (ข้อนี้ใช้ method GET)
+- แล้วนำมา Add DOM โดยกดปุ่มเพื่อส่ง JSON ที่ get มาได้
+- แปลงข้อมูล js (object/array) ให้กลายเป็นสตริงแบบ JSON
+- สร้าง div ใหม่เพื่อแสดงผล
+
+practice3
+
+ขั้นตอนและสิ่งที่ได้ฝึก
+
+- fetch มาจากเว็บไซต์ที่แชทให้มา (ข้อนี้ใช้ method DELETE)
+- แล้วนำมา Add DOM โดยกดปุ่มเพื่อส่ง JSON ที่ delete มาได้
+- สร้าง div ใหม่เพื่อแสดงผล
+- แสดงผลเป็น status code จาก output.textContent = `Deleted (status: ${res.status})`
